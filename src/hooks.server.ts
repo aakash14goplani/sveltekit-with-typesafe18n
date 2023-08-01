@@ -1,5 +1,5 @@
-import type { HandleServerError } from '@sveltejs/kit';
-/* import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
+import type { Handle, HandleServerError } from '@sveltejs/kit';
+import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
 import { setLocale } from '$lib/i18n/i18n-svelte';
 import { detectLocale } from '$lib/i18n/i18n-util';
 import {
@@ -33,9 +33,10 @@ export const handle: Handle = async ({ event, resolve }) => {
 	await loadLocaleAsync(locale);
 	// Set it
 	setLocale(locale);
-	console.log('sss From HOOKS with locale = ', locale);
+	// Set locale within locals property
+	event.locals.locale = deafultLocale;
 	return resolve(event);
-}; */
+};
 
 export const handleError: HandleServerError = ({ error }) => {
 	const message = 'Error caught in [server-hooks]: ' + (error as any)?.message;

@@ -6,13 +6,14 @@ import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
 import { sessionStorageDetector, navigatorDetector } from 'typesafe-i18n/detectors';
 
 export const load: LayoutLoad = async (event) => {
-	const deafultLocale = 'en';
-	const locale = browser
-		? detectLocale(sessionStorageDetector) || detectLocale(navigatorDetector)
-		: deafultLocale;
+	if (browser) {
+		const deafultLocale = 'en';
+		const locale =
+			detectLocale(sessionStorageDetector) || detectLocale(navigatorDetector) || deafultLocale;
 
-	await loadLocaleAsync(locale);
-	setLocale(locale);
+		await loadLocaleAsync(locale);
+		setLocale(locale);
+	}
 
 	return event.data;
 };

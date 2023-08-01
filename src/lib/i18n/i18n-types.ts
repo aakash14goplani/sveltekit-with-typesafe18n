@@ -24,21 +24,6 @@ type RootTranslation = {
 	 */
 	toggle_label: string
 	/**
-	 * {​v​a​l​u​e​}
-	 * @param {number} value
-	 */
-	button_label_0: RequiredParams<'value'>
-	/**
-	 * {​v​a​l​u​e​}
-	 * @param {number} value
-	 */
-	button_label_1: RequiredParams<'value'>
-	/**
-	 * {​v​a​l​u​e​}
-	 * @param {number} value
-	 */
-	button_label_2: RequiredParams<'value'>
-	/**
 	 * T​h​i​s​ ​i​s​ ​a​ ​s​m​a​l​l​ ​e​x​a​m​p​l​e​ ​t​o​ ​d​e​m​o​n​s​t​r​a​t​e​ ​i​1​8​n​ ​f​u​n​c​t​i​o​n​a​l​i​t​y​ ​i​n​ ​S​v​e​l​t​e​K​i​t​ ​u​s​i​n​g​ ​t​y​p​e​s​a​f​e​-​i​1​8​n​ ​l​i​b​r​a​r​y​.​ ​t​y​p​e​s​a​f​e​-​i​1​8​n​ ​i​s​ ​a​ ​f​u​l​l​y​ ​t​y​p​e​-​s​a​f​e​ ​a​n​d​ ​l​i​g​h​t​w​e​i​g​h​t​ ​i​n​t​e​r​n​a​t​i​o​n​a​l​i​z​a​t​i​o​n​ ​l​i​b​r​a​r​y​ ​f​o​r​ ​a​l​l​ ​y​o​u​r​ ​T​y​p​e​S​c​r​i​p​t​ ​a​n​d​ ​J​a​v​a​S​c​r​i​p​t​ ​p​r​o​j​e​c​t​s​.​ ​t​y​p​e​s​a​f​e​-​i​1​8​n​ ​c​o​m​e​s​ ​w​i​t​h​ ​a​n​ ​A​P​I​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​o​t​h​e​r​ ​s​e​r​v​i​c​e​s​ ​t​o​ ​r​e​a​d​ ​a​n​d​ ​u​p​d​a​t​e​ ​t​r​a​n​s​l​a​t​i​o​n​s​.​ ​T​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​n​p​m​ ​d​o​w​n​l​o​a​d​s​ ​p​e​r​ ​w​e​e​k​ ​a​s​ ​o​f​ ​{​d​a​t​e​|​s​i​m​p​l​e​D​a​t​e​}​ ​a​r​e​ ​{​d​o​w​n​l​o​a​d​|​s​i​m​p​l​e​N​u​m​b​e​r​}​.
 	 * @param {Date} date
 	 * @param {number} download
@@ -74,18 +59,6 @@ export type TranslationFunctions = {
 	 * Select Locale
 	 */
 	toggle_label: () => LocalizedString
-	/**
-	 * {value}
-	 */
-	button_label_0: (arg: { value: number }) => LocalizedString
-	/**
-	 * {value}
-	 */
-	button_label_1: (arg: { value: number }) => LocalizedString
-	/**
-	 * {value}
-	 */
-	button_label_2: (arg: { value: number }) => LocalizedString
 	/**
 	 * This is a small example to demonstrate i18n functionality in SvelteKit using typesafe-i18n library. typesafe-i18n is a fully type-safe and lightweight internationalization library for all your TypeScript and JavaScript projects. typesafe-i18n comes with an API that allows other services to read and update translations. Total number of npm downloads per week as of {date|simpleDate} are {download|simpleNumber}.
 	 */
